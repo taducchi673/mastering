@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <style> 
+        .carousel-inner {
+            max-height: 500px;
+        }
+li {
+  font-weight: 200;
+}
+.footer {
+    display:flexbox;
+    width: 100%;
+    position: relative;
+    background: #3b3939;
+    padding: 35px 25px 50px 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 180px
+}
+.footer-start {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 50px;
+    width: 90%;
+    margin: auto;
+    padding: 80px 100px;
+    background: #3d7c13;
+    border-radius: 15px;
+}
+.start-learning {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -150px;
+}
+.footer .inner {
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 20px;
+    max-width: 1180px;
+    margin: auto;
+    text-align: left;
+}
+.main-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.main-logo .logo {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.main-logo .logo > img {
+    display: block;
+    width: 100%;
+    min-width: 40px;
+}
+.logo-info {
+    text-align: left;
+    line-height: 20px;
+}
+.text {
+    font-size: 17px;
+    line-height: 17px;
+    color: #fff;
+    letter-spacing: .18em;
+    font-weight: 600;
+}
+.copyright {
+    color: #fff;
+    font-size: 12px;
+    line-height: 12px;
+}
+.footer .column {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+}
+.footer .column .column-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 0.5em;
+    color: #fff;
+    text-align: left;
+    margin-left: 0.7cm;
+    
+}
+.footer .column .column-title {
+    margin-top: 0em;
+}
+.illustration {
+    left: 8%;
+    position: absolute;
+    top: -28px;
+}
+a.button {
+    display: inline-flex;
+    position: relative;
+    height: 60px;
+    margin-right: 20px;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    background: #fff;
+    color: #92761b;
+    border-radius: 36px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 30px;
+    text-decoration: unset;
+    box-shadow: 0px 24px 74px rgba(171, 166, 180, 0.2);
+}
+.section-title {
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+}
+.section-sub-heading {
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+}
+.section-sub-heading span {
+    opacity: 0.6;
+}
+.section-sub-heading strong {
+    font-weight: 600;
+}
+
+li {
+  
+
+}
+
+
+
+@media only screen and (max-width: 990px) and (min-width: 200px) {
+    body {
+        height: 200vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .footer .inner {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .start-learning {
+        position: unset;
+    }
+    .footer-start {
+        width: 100%;
+        display: block;
+        padding: 30px 20px;
+        margin: 30px 0;
+    }
+    .section-title {
+        font-size: 30px;
+    }
+    .section-sub-heading {
+        font-size: 18px;
+    }
+    footer.footer {
+        padding-top: 0;
+    }
+    a.button {
+        height: 50px;
+        margin-top: 10px;
+    }
+    .column.is-logo {
+        order: 4;
+    }
+}
+
+.footer li {
+  color : white;
+  font-weight: bold;
+}
+.footer .inner .column is-nav .column-title .tiny_list{
+      color: yellow;
+    }
+    </style>
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/" >Chi Ta Duc</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active"  href="/about_me">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="">Education/Qualifications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/about_me">Professional Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/about_me">Publications</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  AI projects
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/ml">Machine Learning</a></li>
+                  <li><a class="dropdown-item" href="#">Deep Learning</a></li>
+                  <li><a class="dropdown-item" href="#">Computer vision</a></li>
+                  <li><a class="dropdown-item" href="#">Natural Language Processing</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  IoT
+                </a>
+                <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href='#'>Web development</a></li>
+                  <li><a class="dropdown-item" href="#">Game development</a></li>
+                  <li><a class="dropdown-item" href="/ml">Machine Learning</a></li>
+                  <li><a class="dropdown-item" href="#">Deep Learning</a></li>
+                  <li><a class="dropdown-item" href="#">Computer vision</a></li>
+                  <li><a class="dropdown-item" href="#">Natural Language Processing</a></li>
+                </ul> -->
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Web/Game
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href='#'>Web development</a></li>
+                  <li><a class="dropdown-item" href="#">Game development</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Data Analyst </a>
+                <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href='#'>Data</a></li>
+                  <li><a class="dropdown-item" href="#">Game development</a></li>
+                </ul> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/contact_me" tabindex="-1" aria-disabled="true">Contact me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>   
+      <h1 style="text-align: center">After long days of copying and pasting, I got this page =))))))</h1>
+    <class>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2021/09/01.-ML-la-gi.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="https://imageio.forbes.com/specials-images/dam/imageserve/1129869424/960x0.jpg?fit=bounds&format=jpg&width=960" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVyTEsX_yg9jX1lv_ZOgZfMhOzXsdC0OCRdL8g5TXz8DPwPRGc19i57Onx0zhgttT1-A0&usqp=CAU" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="https://smartpro.vn/images/programes/768x1024/515844background_mobile.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </class>
+
+
+    <img src="https://th.bing.com/th/id/OIP.U2uS8pcCl-25uOzfoWZtvgAAAA?pid=ImgDet&w=330&h=282&rs=1" alt="None" style="align-self: center;">
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+{% block content %}
+
+{% endblock %}
+    <!-- Footer starts here -->
+    <footer class="footer" >
+      <div class="inner">
+          <div class="column is-logo">
+              <a href="#" class="main-logo">
+                  <div class="logo">
+                      <img src="https://th.bing.com/th/id/R.c74b8e85a94ed3378cf264c978ca2fab?rik=haYzxDkeQeCHyw&pid=ImgRaw&r=0" alt="chitaduc">
+                  </div>
+                  <div class="logo-info">
+                      <div class="text">Chi Ta Duc</div>
+                      <span class="copyright">© 2022. All rights reserved.</span>
+                  </div>
+              </a>
+          </div>
+          <div class="column is-nav">
+              <div class="column-title">Navigation</div>
+              <ul>
+                  <li class = tiny_list><a href="/">Home</a></li>
+                  <li class = tiny_list><a href="/about_me">About me</a></li>
+                  <li class = tiny_list><a href="#">Contact me</a></li>
+              </ul>
+          </div>
+
+          <div class="column is-nav">
+              <div class="column-title">Contact</div>
+              <ul>
+                  <li class = "tiny_list"><a href="/">Google Scholar</a></li>
+                  <li class = "tiny_list"><a href="https://www.facebook.com/taducchi">Facebook-Duc-Chi</a></li>
+                  <li class = "tiny_list"><a href="https://www.linkedin.com/in/chi-ta-duc/">Linkedin-Chi-Ta-Duc</a></li>
+              </ul>
+          </div>
+
+          <div class="column is-nav">
+              <div class="column-title">Knowledge is for sharing!</div>
+              <ul>
+                  <li class = tiny_list><a href="#">Data Malnipulation with Pandas</a></li>
+                  <li class = tiny_list><a href="#">Machine learning Fundermentals</a></li>
+                  <li class = tiny_list><a href="#">Computer Vision Fundermentals</a></li>
+              </ul>
+          </div>
+      </div>
+    </footer>
+
+    <!-- Footer ends here -->
+</body>
+</html>
