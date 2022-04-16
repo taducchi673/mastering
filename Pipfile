@@ -17,6 +17,7 @@ flask-wtf = "*"
 flask-sqlalchemy = "*"
 sqlalchemy = "*"
 pandas = "*"
+opencv-python = "*"
 
 [dev-packages]
 
